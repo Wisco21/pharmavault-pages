@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Payment Complete</title>
+  <title>Payment wisco Complete</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: sans-serif; text-align: center; padding: 40px; }
-    button { padding: 12px 24px; background: #4F46E5; color: white; border: none; border-radius: 8px; font-size: 16px; }
+    button { padding: 12px 24px; background: #4F46E5; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+    .success { color: #2e7d32; }
+    .note { color: #666; margin-top: 20px; }
   </style>
 </head>
 <body>
-  <h2>✅ Payment Successful</h2>
-  <p>Your subscription has been upgraded.</p>
-  <button onclick="window.location.href='pharmavault://payment-return'">Return to PharmaVault</button>
-  <p style="margin-top: 20px; color: #666;">If the button doesn't work, please manually reopen the app.</p>
+  <h2 class="success">✅ Payment Successful</h2>
+  <p>Your PharmaVault Business subscription is now active.</p>
+  <button id="return-btn">Return to PharmaVault</button>
+  <p class="note">You can close this page and return to the app.</p>
+
+  <script>
+    const returnBtn = document.getElementById('return-btn');
+    returnBtn.addEventListener('click', function() {
+      window.location.href = 'pharmavault://payment-return';
+    });
+  </script>
 </body>
 </html>
