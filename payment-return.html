@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Payment wisco Complete</title>
+  <title>Payment Complete</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: sans-serif; text-align: center; padding: 40px; }
@@ -17,8 +17,7 @@
   <p class="note">You can close this page and return to the app.</p>
 
   <script>
-    const returnBtn = document.getElementById('return-btn');
-    returnBtn.addEventListener('click', function() {
+    document.getElementById('return-btn').addEventListener('click', function() {
       window.location.href = 'pharmavault://payment-return';
     });
   </script>
